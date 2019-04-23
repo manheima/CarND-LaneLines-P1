@@ -1,7 +1,6 @@
 # **Finding Lane Lines on the Road**
 
 *Aaron Manheim* 4/22/2019
-
 ---
 
 **Finding Lane Lines on the Road**
@@ -31,6 +30,7 @@ My pipeline started by taking in an image of the road.
 ![alt text][image0]
 
 The pipeline consisted of 4 steps. First, I converted the image to grayscale and ran a Canny Edge detection algorithm. This resulted in only keeping the sharp edges:
+
 ![alt text][image1]
 
 Next, I masked only othe region of interest:

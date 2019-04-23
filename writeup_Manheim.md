@@ -8,7 +8,7 @@
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
-
+---
 
 [//]: # (Image References)
 
@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [image5]: ./test_images_output/WeightedHoughLineDetection_RawLines.png "Weighted Hough Line Detection Raw"
 [image6]: ./test_images_output/HoughLineDetection.png "Weighted Hough Line Detection"
 [image7]: ./test_images_output/WeightedHoughLineDetection.png "Weighted Hough Line Detection"
----
+
 
 ### Reflection
 
@@ -35,14 +35,17 @@ The pipeline consisted of 4 steps. First, I converted the image to grayscale and
 
 Next, I masked only othe region of interest:
 ![alt text][image3] 
+
 ![alt text][image2]
 
 After that, I ran a Hough Transform to extract lines from the pixels forming the lane lines:
 ![alt text][image4]
+
 ![alt text][image5]
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by classifying lines as left vs right lane lines by checking position in x and also if slope was greater than or less than 0. I then took a weighted average (weighted by the length of the line) of the slopes and intercepts to get a signle line for each lane:
 ![alt text][image6]
+
 ![alt text][image7]
 
 
